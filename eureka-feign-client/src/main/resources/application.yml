@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-feign-client
+
+server:
+  port: 8766
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.153.156:8761/eureka/
