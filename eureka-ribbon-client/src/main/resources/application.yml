@@ -5,6 +5,13 @@ spring:
 server:
   port: 8765
 
+# 暴露全部的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 eureka:
   client:
     service-url:

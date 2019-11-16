@@ -9,3 +9,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.153.156:8761/eureka/
+feign:
+  hystrix:
+    enabled: true
+
+# 暴露全部的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

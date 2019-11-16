@@ -3,6 +3,8 @@ package online.shenjian.eureka.feign;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
@@ -10,9 +12,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @version V1.0.0
  * @date 2019/11/16
  */
+@SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-@SpringBootApplication
+@EnableHystrix
+@EnableHystrixDashboard
 public class EurekaFeignApplication {
 
     public static void main(String[] args) {

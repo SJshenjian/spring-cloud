@@ -1,23 +1,21 @@
-package online.shenjian.eureka.ribbon;
+package online.shenjian.eureka.turbine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 /**
  * @author Jian Shen
  * @version V1.0.0
- * @date 2019/11/3
+ * @date 2019/11/16
  */
 @SpringBootApplication
-@EnableEurekaClient
-@EnableHystrix
 @EnableHystrixDashboard
-public class EurekaRibbonApplication {
+@EnableTurbine
+public class ServiceTurbineApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaRibbonApplication.class, args);
+        SpringApplication.run(ServiceTurbineApplication.class, args);
     }
 }
