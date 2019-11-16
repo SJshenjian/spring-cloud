@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-zuul
+server:
+  port: 5000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.153.156:8761/eureka/
+
+zuul:
+  routes:
+    hiApi:
+      path: /hiApi/**
+      serviceId: eureka-client
+    ribbonApi:
+      path: /ribbonApi/**
+      serviceId: eureka-ribbon-client
+    feignApi:
+      path: /feignApi/**
+      serviceId: eureka-feign-client
+
+  prefix: /v1

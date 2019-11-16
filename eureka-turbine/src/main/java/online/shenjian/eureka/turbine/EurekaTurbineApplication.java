@@ -13,9 +13,9 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 @SpringBootApplication
 @EnableHystrixDashboard
 @EnableTurbine
-public class ServiceTurbineApplication {
+public class EurekaTurbineApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceTurbineApplication.class, args);
+        SpringApplication.run(EurekaTurbineApplication.class, args);
     }
 }
