@@ -2,4 +2,4 @@ server:
   port: 8772
 
 # 自定义变量，用于验证client读取正确性
-author: Domi
+author: Jian Shen
