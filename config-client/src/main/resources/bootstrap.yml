@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: config-client
+  profiles:
+    active: dev
+  cloud:
+    config:
+      # 未配置eureka时直接指向config-server
+      # uri: http://localhost:8770
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-server
+  rabbitmq:
+    host: 192.168.153.158
+    port: 5672
+    virtual-host: admin-vhost
+    username: admin
+    password: admin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.153.156:8761/eureka/
+
+# 屏蔽安全验证
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
