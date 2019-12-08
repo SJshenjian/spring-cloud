@@ -1,6 +1,12 @@
 spring:
   application:
     name: eureka-client
+  # 新增服务链路追踪
+  zipkin:
+    base-url: http://192.168.153.161:9411
+  sleuth:
+    sampler:
+      probability: 1.0
 ---
 spring:
   profiles: eurekaClient01

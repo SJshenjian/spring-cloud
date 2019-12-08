@@ -1,6 +1,11 @@
 spring:
   application:
     name: eureka-zuul
+  zipkin:
+    base-url: http://192.168.153.161:9411
+  sleuth:
+    sampler:
+      probability: 1.0 # 100%的概率将链路的数据上传给Zipkin Server
 server:
   port: 5000
 eureka:
